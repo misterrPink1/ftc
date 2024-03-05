@@ -42,7 +42,7 @@ const Login = ({noName}) => {
                 body: JSON.stringify( body ),
             })
             if(res.status === 200){
-                let user = await res.json()
+                router.push('/')
             } else {
                 console.error("Magic Login Failed", await res.text())
                 alert("There was an issue with login and sub, please message @misterrpink1 on twitter.")
