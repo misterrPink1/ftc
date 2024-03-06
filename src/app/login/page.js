@@ -15,6 +15,8 @@ const LoginPage = () => {
     useEffect(() => {
         if(!user){
             router.push('/login')
+        }else{
+            router.push('/')
         }
     },[user])
 

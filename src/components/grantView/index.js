@@ -74,7 +74,7 @@ const GrantView = () => {
                 <div className="pt-2">😃 If Location, "For Whom", Deadline are empty, it means there are none specified, location agnostic, rolling deadline and for everyone </div>
                 <div>🔗 Double click on Link to copy it</div>
                 <div>
-                    When you hover over a column heaer you can click on the hamburger icon to more granular filters. 
+                    When you hover over a column header you can click on the hamburger icon to more granular filters. 
                     <div className="p-1 bg-slate-100 border border-slate-200 rounded-sm w-28 flex place-items-center place-content-center text-sm gap-1 mt-4">
                         Name <IoArrowUp /> <RxHamburgerMenu />
 
