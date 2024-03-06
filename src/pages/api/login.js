@@ -30,11 +30,11 @@ export default async (req, res) => {
 
         let newSession = { ...metadata, userId: user._id, name: user.name};
         await setLoginSession(res, newSession);
-        try {
+        /*try {
           await addUserToEmailList(metadata.email, req.body.name);
         } catch (error) {
           console.error(error, "Error in adding user to email list");
-        }
+        }*/
         res.status(200).send({ done: true, newUser: user });
       } catch (error) {
         console.error(error, "Error in user creation or session setting");
