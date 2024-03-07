@@ -12,7 +12,7 @@ const Nav = () => {
     return (
       <div className="flex w-full p-10 sm:p-6 z-40">
         <div className="w-4/12 font-black text-xl"><Link href="/">Free The Creator</Link></div>
-        <div className="w-8/12 underline text-right text-sm pr-6 cursor-pointer hover:text-lychee-" ><Link href="/more">More.</Link></div>
+        <div className="w-8/12 underline text-right text-sm pr-6 cursor-pointer hover:text-lychee-red" ><Link href="/more">More.</Link></div>
       </div>      
     )
   }
