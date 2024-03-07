@@ -12,14 +12,13 @@ import "ag-grid-community/styles/ag-theme-quartz.css"; // Theme
 
 import { IoArrowUp } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
-
-
-
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const GrantView = () => {
     const user = useUser()
     const [colDefs, setColDefs] = useState();
     const [data, setData] = useState()
+    const [loading, setLoading] = useState(true)
 
 
     /*
@@ -63,6 +62,14 @@ const GrantView = () => {
         }
     }, [])
 
+    useEffect(()=>{
+        if(!data){
+            setLoading(true)
+        }else{
+            setLoading(true)
+        }
+    }, [data])
+
 
     return(
         <div className="p-10 w-screen">
@@ -77,7 +84,6 @@ const GrantView = () => {
                     When you hover over a column header you can click on the hamburger icon to more granular filters. 
                     <div className="p-1 bg-slate-100 border border-slate-200 rounded-sm w-28 flex place-items-center place-content-center text-sm gap-1 mt-4">
                         Name <IoArrowUp /> <RxHamburgerMenu />
-
                     </div>
                 </div>
                 <div className="pt-4 sm:w-2/3">
@@ -85,6 +91,14 @@ const GrantView = () => {
                     <div>I am working on improvements for "Award amounts". Each grant is so variable. You will simply have to look at the website link itself to get a "true" value</div>
                 </div>
             </div>
+            {
+                loading &&
+                    <div className="flex w-full place-items-center place-content-center text-xs gap-2 py-10 text-lychee-red animate-pulse">
+                        <AiOutlineLoading3Quarters className='animate-spin'/>
+                        Loading...
+                    </div>
+                
+            }
             {
                 data &&
                     <div className="ag-theme-quartz py-20 w-[95%] h-[800px] mx-auto">
