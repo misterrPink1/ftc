@@ -4,7 +4,6 @@
 import Script from 'next/script'
 //import { GoogleAnalytics } from '@next/third-parties/google'
 
-import { StateProvider } from '@/context/stateContext'
 import Dashboard from '@/components/dashboard';
 
 export default function Home() {
@@ -22,12 +21,11 @@ export default function Home() {
           id = "ms-clarity"
           strategy="afterInteractive"
         >{clairtyCode}</Script>
-        {/*<GoogleAnalytics gaId="G-G8X2NEPTEG" />*/}
-        <StateProvider>
-          <div className="p-10 flex flex-col place-items-center">
+          {/*<GoogleAnalytics gaId="G-G8X2NEPTEG" />*/}
+          <div className="p-4 flex flex-col place-items-center">
+            
             <Dashboard />
           </div>
-        </StateProvider>
     </>
   )
 }

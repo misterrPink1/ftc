@@ -15,7 +15,12 @@ const More = () => {
                     <div className='hover:text-lychee-red'><Link href={"https://www.instagram.com/misterrpink1_builds/"}><FaInstagram /></Link></div>
                     <div className='hover:text-lychee-red'><Link href={"https://www.tiktok.com/@misterrpink_builds"}><FaTiktok /></Link></div>
                 </div>
-                <div className='grid grid-cols-2 gap-4 text-center px-72 gap-5'>
+                <div className='grid grid-cols-2 lg:gap-4 text-center px-8 place-items-center lg:px-72 gap-5 text-xs'>
+                    <Link href="https://buy.stripe.com/28oaGYb4GbT85AkcMW">
+                            <div className="bg-white text-black border border-green-300 shadow-green-300  rounded-xl shadow-2xl p-10 flex flex-col place-items-center gap-2 cursor-pointer hover:bg-black hover:text-white hover:shadow-xl hover:shadow-lychee-red hover:border-0">
+                                <div>Buy me a coffee ❤️ </div>
+                            </div>
+                    </Link>
                     <Link href={'https://www.lych3e.com/'}>
                         <div className='p-10 rounded-lg border hover:bg-black hover:text-white cursor-pointer'>
                             <div className='text-xl'>Lychee </div>

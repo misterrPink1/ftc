@@ -14,9 +14,10 @@ export function useMyState() {
 export const StateProvider = ({ children }) => {
   const [working, setWorking] = useState(null);
   const [aiOpen, setAiOpen] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   return (
-    <StateContext.Provider value={{ working, setWorking, aiOpen, setAiOpen }}>
+    <StateContext.Provider value={{ working, setWorking, aiOpen, setAiOpen, loggedIn, setLoggedIn }}>
       {children}
     </StateContext.Provider>
   );
